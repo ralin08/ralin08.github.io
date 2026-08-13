@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rachael Lin — Computational Biology &amp; Machine Learning</title>
+<meta name="description" content="Rachael Lin is a student researcher working across computational biology, machine learning, and bioengineering — from lineage-anchored optimal transport at Caltech's Thomson Lab to hormone-feedback modeling and FTC robotics.">
+<link rel="canonical" href="https://rachaellin.dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rachael Lin — Computational Biology & Machine Learning">
+<meta property="og:description" content="Student researcher working across computational biology, machine learning, and bioengineering.">
+<meta property="og:image" content="/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rachael Lin",
+  "email": "mailto:rachaellin@berkeley.edu",
+  "sameAs": ["https://www.linkedin.com/in/rachael-lin-562361315/"],
+  "affiliation": [
+    {"@type": "CollegeOrUniversity", "name": "UC Berkeley"}
+  ],
+  "url": "https://rachaellin.dev/"
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="site-logo">Rachael Lin</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+    </button>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow hero-eyebrow">Computational biology · Machine learning · Bioengineering</p>
+      <h1>Rachael Lin</h1>
+      <p class="hero-lede">I move between biology, mathematics, and computation depending on what a problem needs — anchoring single-cell fate predictions to lineage barcodes, modeling the hormone feedback loops behind PCOS, and tuning a robot's turret to hit a moving target.</p>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn btn-primary">View projects</a>
+        <a href="cv.html" class="btn btn-secondary">View CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-border-top reveal">
+    <div class="container">
+      <div class="featured">
+        <div>
+          <div class="featured-label">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="eyebrow">Featured research</span>
+          </div>
+          <span class="featured-org">Caltech · Thomson Lab · with Shichen Liu &amp; Matt Thomson</span>
+          <h3>Lineage-anchored optimal transport</h3>
+          <p>Existing methods for tracking cell trajectories through time only use lineage-barcode data to check their answers after the fact — never to guide the transport solution itself. LA-OT pre-assigns transport mass to a cell's known clonal relatives before solving, which resolves a tradeoff where common cell types and rare ones can't both be predicted well by the same model.</p>
+          <div class="stat-row">
+            <span class="stat-chip accent">+21% cosine similarity</span>
+            <span class="stat-chip accent">+33% top-1 accuracy</span>
+            <span class="stat-chip">pDC rescue: 0.253 → 0.894</span>
+          </div>
+          <p class="mt-2"><a href="projects.html#lineage-anchored-ot">Read the case study →</a></p>
+        </div>
+        <div class="featured-figure" aria-hidden="true">
+          <svg viewBox="0 0 300 220" width="100%" height="100%" role="img" aria-label="Diagram of transport mass connecting source cells to target cells, with two bold anchored connections representing known clonal relatives among many faint unconstrained connections">
+            <title>Lineage-anchored transport schematic</title>
+            <g stroke="#DCD3C7" stroke-width="1" opacity="0.55">
+              <line x1="60" y1="30" x2="240" y2="55"/>
+              <line x1="60" y1="30" x2="240" y2="95"/>
+              <line x1="60" y1="70" x2="240" y2="30"/>
+              <line x1="60" y1="70" x2="240" y2="140"/>
+              <line x1="60" y1="110" x2="240" y2="95"/>
+              <line x1="60" y1="110" x2="240" y2="180"/>
+              <line x1="60" y1="150" x2="240" y2="30"/>
+              <line x1="60" y1="150" x2="240" y2="140"/>
+              <line x1="60" y1="190" x2="240" y2="180"/>
+              <line x1="60" y1="190" x2="240" y2="95"/>
+            </g>
+            <line x1="60" y1="70" x2="240" y2="55" stroke="#9C3A66" stroke-width="2.25"/>
+            <line x1="60" y1="150" x2="240" y2="180" stroke="#9C3A66" stroke-width="2.25"/>
+            <g fill="#5A4A42">
+              <circle cx="60" cy="30" r="4"/>
+              <circle cx="60" cy="70" r="4"/>
+              <circle cx="60" cy="110" r="4"/>
+              <circle cx="60" cy="150" r="4"/>
+              <circle cx="60" cy="190" r="4"/>
+            </g>
+            <g fill="#5A4A42">
+              <circle cx="240" cy="30" r="4"/>
+              <circle cx="240" cy="55" r="4"/>
+              <circle cx="240" cy="95" r="4"/>
+              <circle cx="240" cy="140" r="4"/>
+              <circle cx="240" cy="180" r="4"/>
+            </g>
+            <circle cx="60" cy="70" r="5.5" fill="#9C3A66"/>
+            <circle cx="60" cy="150" r="5.5" fill="#9C3A66"/>
+            <circle cx="240" cy="55" r="5.5" fill="#9C3A66"/>
+            <circle cx="240" cy="180" r="5.5" fill="#9C3A66"/>
+            <text x="60" y="14" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#8A7F77">day 4</text>
+            <text x="240" y="14" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#8A7F77">day 6</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-border-top reveal">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">More projects</p>
+        <h2>Research and engineering</h2>
+        <p>Independent research, lab work, and four years leading an FTC robotics team.</p>
+      </div>
+      <div class="mini-grid">
+        <a href="projects.html#ms-antibody" class="mini-card">
+          <p class="eyebrow">Stanford · Lanz Lab</p>
+          <h4>MS antibody maturation</h4>
+          <p>Site-directed mutagenesis and ELISA assays testing how somatic hypermutation turns anti-EBV antibodies autoreactive against myelin protein.</p>
+        </a>
+        <a href="projects.html#ms-edss" class="mini-card">
+          <p class="eyebrow">Independent research</p>
+          <h4>MS / EDSS prediction</h4>
+          <p>Random forest regression and classification comparing clinical versus biological marker data across two multiple sclerosis datasets.</p>
+        </a>
+        <a href="projects.html#ftc-robotics" class="mini-card">
+          <p class="eyebrow">Knights of Ni · Team captain</p>
+          <h4>FTC robotics</h4>
+          <p>PID drive control, odometry, and an AprilTag-guided auto-aiming turret, built and led with a globally distributed team.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-border-top reveal">
+    <div class="container">
+      <div class="about-teaser">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>A quick sketch</h2>
+        </div>
+        <div>
+          <p>I'm a student at UC Berkeley studying computational biology, with research experience spanning a Caltech systems biology lab, a Stanford immunology lab, and several independent projects connecting machine learning to endocrinology and neurology. Outside research, I've spent four years captaining an FTC robotics team and tutoring students in STEM subjects.</p>
+          <p class="mt-1"><a href="about.html">More about me →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <p class="footer-meta">© 2026 Rachael Lin</p>
+      <ul class="footer-links">
+        <li><a href="mailto:rachaellin@berkeley.edu">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/rachael-lin-562361315/">LinkedIn</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
